@@ -1,0 +1,23 @@
+[
+  {
+    "file": "prometheus-production-monitoring.md",
+    "title": "Effectively Monitoring Production Systems with Prometheus Metrics",
+    "date": "2026-04-27",
+    "tags": ["Prometheus", "Observability", "SRE"],
+    "excerpt": "A practical playbook for instrumenting production services with Prometheus — the four golden signals, picking the right metric type, Spring Boot + Micrometer, PromQL queries that earn their keep, SLO-based alerting, and the cardinality trap."
+  },
+  {
+    "file": "getting-started-with-kafka.md",
+    "title": "Getting Started with Apache Kafka: A Practical Guide",
+    "date": "2025-04-10",
+    "tags": ["Kafka", "Java", "Microservices"],
+    "excerpt": "Apache Kafka is a distributed event streaming platform. In this post I walk through key concepts — producers, consumers, topics, and partitions — with hands-on Java examples."
+  },
+  {
+    "file": "reactive-programming-spring-webflux.md",
+    "title": "Reactive Programming with Spring WebFlux",
+    "date": "2025-03-22",
+    "tags": ["Spring", "Reactive", "Java"],
+    "excerpt": "How I leveraged Spring WebFlux and Project Reactor at OpenText to build a high-throughput document management API — and the lessons I learned along the way."
+  }
+]

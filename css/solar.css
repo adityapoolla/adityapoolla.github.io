@@ -1,0 +1,227 @@
+/* ============================================
+   SOLAR.CSS — Solar System Hero Section
+   ============================================ */
+
+#hero {
+  position: relative;
+  width: 100%;
+  height: 100vh;
+  min-height: 600px;
+  overflow: hidden;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background: radial-gradient(ellipse at center, #0a1628 0%, #03040a 70%);
+}
+
+#starfield {
+  position: absolute;
+  inset: 0;
+  width: 100%; height: 100%;
+  z-index: 0;
+}
+
+/* ── SOLAR SYSTEM CONTAINER ── */
+.solar-system {
+  position: relative;
+  width: 600px;
+  height: 600px;
+  z-index: 1;
+}
+
+/* ── SUN ── */
+.sun {
+  position: absolute;
+  top: 50%; left: 50%;
+  width: 110px; height: 110px;
+  transform: translate(-50%, -50%);
+  z-index: 10;
+  cursor: default;
+}
+
+.sun-core {
+  position: absolute;
+  inset: 0;
+  border-radius: 50%;
+  background: radial-gradient(circle at 38% 35%,
+    #fff9c4 0%, #ffeb3b 20%, #f5a623 50%, #e65100 80%);
+  box-shadow:
+    0 0 20px 8px rgba(245,166,35,0.6),
+    0 0 50px 20px rgba(245,166,35,0.3),
+    0 0 100px 40px rgba(245,166,35,0.1);
+  animation: sun-pulse 3s ease-in-out infinite;
+}
+
+.sun-glow {
+  position: absolute;
+  inset: -20px;
+  border-radius: 50%;
+  background: radial-gradient(circle, rgba(245,166,35,0.15) 0%, transparent 70%);
+  animation: sun-pulse 3s ease-in-out infinite reverse;
+}
+
+@keyframes sun-pulse {
+  0%, 100% { transform: scale(1);   opacity: 1; }
+  50%       { transform: scale(1.06); opacity: 0.9; }
+}
+
+/* Sun label */
+.sun-label {
+  position: absolute;
+  top: 50%; left: 50%;
+  transform: translate(-50%, 68px);
+  text-align: center;
+  white-space: nowrap;
+  pointer-events: none;
+}
+.sun-label .name {
+  display: block;
+  font-family: var(--font-display);
+  font-size: 1.05rem;
+  font-weight: 700;
+  color: var(--accent-gold);
+  letter-spacing: 0.3px;
+  text-shadow: 0 0 10px rgba(245,166,35,0.8);
+}
+.sun-label .role {
+  display: block;
+  font-family: var(--font-mono);
+  font-size: 0.75rem;
+  color: var(--text-dim);
+  letter-spacing: 1px;
+  text-transform: uppercase;
+  margin-top: 5px;
+}
+
+/* ── ORBITS ── */
+.orbit {
+  position: absolute;
+  top: 50%; left: 50%;
+  border-radius: 50%;
+  border: 1px solid rgba(79,195,247,0.12);
+  transform: translate(-50%, -50%);
+  animation-timing-function: linear;
+  animation-iteration-count: infinite;
+}
+
+.orbit-1 { width: 180px; height: 180px; animation: orbit-spin 8s linear infinite; }
+.orbit-2 { width: 270px; height: 270px; animation: orbit-spin 13s linear infinite; }
+.orbit-3 { width: 360px; height: 360px; animation: orbit-spin 20s linear infinite; }
+.orbit-4 { width: 450px; height: 450px; animation: orbit-spin 28s linear infinite; }
+.orbit-5 { width: 540px; height: 540px; animation: orbit-spin 36s linear infinite; }
+
+@keyframes orbit-spin {
+  from { transform: translate(-50%, -50%) rotate(0deg); }
+  to   { transform: translate(-50%, -50%) rotate(360deg); }
+}
+
+/* ── PLANETS ── */
+.planet {
+  position: absolute;
+  top: 0; left: 50%;
+  border-radius: 50%;
+  cursor: pointer;
+  transform: translateX(-50%) translateY(-50%);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  transition: filter 0.3s;
+}
+
+/* Counter-rotate label to stay readable */
+.planet-label {
+  position: absolute;
+  bottom: -24px;
+  font-family: var(--font-display);
+  font-size: 0.65rem;
+  font-weight: 500;
+  letter-spacing: 1.2px;
+  text-transform: uppercase;
+  color: var(--text-dim);
+  white-space: nowrap;
+  animation: counter-spin-1 8s linear infinite;
+  pointer-events: none;
+}
+.orbit-2 .planet-label { animation-duration: 13s; }
+.orbit-3 .planet-label { animation-duration: 20s; }
+.orbit-4 .planet-label { animation-duration: 28s; }
+.orbit-5 .planet-label { animation-duration: 36s; }
+
+@keyframes counter-spin-1 {
+  from { transform: rotate(0deg); }
+  to   { transform: rotate(-360deg); }
+}
+
+.planet:hover { filter: brightness(1.4) drop-shadow(0 0 12px currentColor); }
+.planet:hover .planet-label { color: #fff; }
+
+/* Individual planet styles */
+.planet-about {
+  width: 28px; height: 28px;
+  background: radial-gradient(circle at 35% 30%, #80deea, #006064);
+  box-shadow: 0 0 10px rgba(0,188,212,0.6);
+}
+.planet-skills {
+  width: 38px; height: 38px;
+  background: radial-gradient(circle at 35% 30%, #ffcc80, #bf360c);
+  box-shadow: 0 0 12px rgba(255,152,0,0.6);
+}
+.planet-exp {
+  width: 46px; height: 46px;
+  background: radial-gradient(circle at 35% 30%, #ce93d8, #4a148c);
+  box-shadow: 0 0 14px rgba(156,39,176,0.6);
+}
+.planet-blogs {
+  width: 34px; height: 34px;
+  background: radial-gradient(circle at 35% 30%, #a5d6a7, #1b5e20);
+  box-shadow: 0 0 12px rgba(76,175,80,0.6);
+}
+.planet-contact {
+  width: 30px; height: 30px;
+  background: radial-gradient(circle at 35% 30%, #ef9a9a, #b71c1c);
+  box-shadow: 0 0 10px rgba(244,67,54,0.6);
+}
+
+/* Planet ring (Saturn-like) */
+.planet-ring {
+  position: absolute;
+  width: 140%; height: 30%;
+  border: 2px solid rgba(255,255,255,0.25);
+  border-radius: 50%;
+  transform: rotateX(70deg);
+  pointer-events: none;
+}
+
+/* ── HERO HINT ── */
+.hero-hint {
+  position: absolute;
+  bottom: 32px; left: 50%;
+  transform: translateX(-50%);
+  font-family: var(--font-mono);
+  font-size: 0.75rem;
+  letter-spacing: 0.5px;
+  color: var(--text-muted);
+  animation: float-hint 2s ease-in-out infinite;
+  z-index: 2;
+}
+@keyframes float-hint {
+  0%, 100% { transform: translateX(-50%) translateY(0); }
+  50%       { transform: translateX(-50%) translateY(-6px); }
+}
+
+/* ── RESPONSIVE SOLAR ── */
+@media (max-width: 640px) {
+  .solar-system { width: 340px; height: 340px; }
+  .orbit-1 { width: 110px; height: 110px; }
+  .orbit-2 { width: 165px; height: 165px; }
+  .orbit-3 { width: 220px; height: 220px; }
+  .orbit-4 { width: 275px; height: 275px; }
+  .orbit-5 { width: 330px; height: 330px; }
+  .sun { width: 70px; height: 70px; }
+  .sun-label .name { font-size: 0.65rem; }
+  .planet-about { width: 18px; height: 18px; }
+  .planet-skills { width: 24px; height: 24px; }
+  .planet-exp    { width: 30px; height: 30px; }
+  .planet-blogs  { width: 22px; height: 22px; }
+  .planet-contact{ width: 20px; height: 20px; }
+}

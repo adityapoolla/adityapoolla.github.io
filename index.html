@@ -1,0 +1,331 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Aditya Poolla | Software Engineer</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@400;500;600;700&family=Inter:wght@300;400;500;600;700&family=JetBrains+Mono:wght@400;500&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="css/style.css" />
+  <link rel="stylesheet" href="css/solar.css" />
+  <link rel="stylesheet" href="css/sections.css" />
+</head>
+<body>
+
+  <!-- ── NAV ── -->
+  <nav id="navbar">
+    <div class="nav-logo">AP<span class="dot">.</span></div>
+    <ul class="nav-links">
+      <li><a href="#hero"     data-section="hero">Home</a></li>
+      <li><a href="#about"    data-section="about">About</a></li>
+      <li><a href="#skills"   data-section="skills">Skills</a></li>
+      <li><a href="#experience" data-section="experience">Experience</a></li>
+      <li><a href="#blogs"    data-section="blogs">Blogs</a></li>
+      <li><a href="#contact"  data-section="contact">Contact</a></li>
+    </ul>
+    <button class="hamburger" id="hamburger" aria-label="Toggle menu">
+      <span></span><span></span><span></span>
+    </button>
+  </nav>
+
+  <!-- ── HERO / SOLAR SYSTEM ── -->
+  <section id="hero">
+    <canvas id="starfield"></canvas>
+
+    <div class="solar-system" id="solarSystem">
+      <!-- Sun -->
+      <div class="sun" id="sun">
+        <div class="sun-core"></div>
+        <div class="sun-glow"></div>
+        <div class="sun-label">
+          <span class="name">Aditya Poolla</span>
+          <span class="role">Software Engineer ·</span>
+        </div>
+      </div>
+
+      <!-- Orbit 1 – About -->
+      <div class="orbit orbit-1">
+        <div class="planet planet-about" data-target="#about">
+          <div class="planet-ring"></div>
+          <span class="planet-label">About</span>
+        </div>
+      </div>
+
+      <!-- Orbit 2 – Skills -->
+      <div class="orbit orbit-2">
+        <div class="planet planet-skills" data-target="#skills">
+          <span class="planet-label">Skills</span>
+        </div>
+      </div>
+
+      <!-- Orbit 3 – Experience -->
+      <div class="orbit orbit-3">
+        <div class="planet planet-exp" data-target="#experience">
+          <div class="planet-ring"></div>
+          <span class="planet-label">Experience</span>
+        </div>
+      </div>
+
+      <!-- Orbit 4 – Blogs -->
+      <div class="orbit orbit-4">
+        <div class="planet planet-blogs" data-target="#blogs">
+          <span class="planet-label">Blogs</span>
+        </div>
+      </div>
+
+      <!-- Orbit 5 – Contact -->
+      <div class="orbit orbit-5">
+        <div class="planet planet-contact" data-target="#contact">
+          <span class="planet-label">Contact</span>
+        </div>
+      </div>
+    </div>
+
+    <div class="hero-hint">
+      <span>↓ Scroll to explore</span>
+    </div>
+  </section>
+
+  <!-- ── ABOUT ── -->
+  <section id="about" class="section">
+    <div class="section-inner">
+      <h2 class="section-title">About <span>Me</span></h2>
+      <div class="about-grid">
+        <div class="about-text">
+          <p>Experienced software engineer with <strong>8+ years</strong> of expertise in designing, developing, and optimizing scalable web-based and enterprise applications.</p>
+          <p>Proficient in <strong>Java, Spring Framework</strong>, and modern front-end technologies with a strong emphasis on <strong>microservices architecture, cloud computing</strong>, and reactive programming.</p>
+          <p>Skilled in engineering effective software solutions by evaluating multiple approaches and analyzing their trade-offs to deliver optimal results.</p>
+          <div class="about-meta">
+            <div class="meta-item"><span class="meta-icon">📍</span> Hyderabad, India</div>
+            <div class="meta-item"><span class="meta-icon">🎓</span> B.Tech, NIT Puducherry .</div>
+            <div class="meta-item"><span class="meta-icon">☁️</span> AWS Certified Cloud Practitioner</div>
+          </div>
+          <div class="about-links">
+            <a href="mailto:poollaad19@gmail.com" class="btn-outline">✉ Email Me</a>
+            <a href="https://in.linkedin.com/in/adityapoolla" target="_blank" class="btn-outline">in LinkedIn</a>
+            <a href="https://leetcode.com" target="_blank" class="btn-outline">⚡ LeetCode</a>
+          </div>
+        </div>
+        <div class="about-visual">
+          <div class="orbit-mini">
+            <div class="sun-mini"></div>
+            <div class="orbit-mini-ring r1"><div class="dot-mini d1"></div></div>
+            <div class="orbit-mini-ring r2"><div class="dot-mini d2"></div></div>
+            <div class="orbit-mini-ring r3"><div class="dot-mini d3"></div></div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ── SKILLS ── -->
+  <section id="skills" class="section section-dark">
+    <div class="section-inner">
+      <h2 class="section-title">Tech <span>Skills</span></h2>
+      <div class="skills-grid">
+
+        <div class="skill-card">
+          <div class="skill-icon">☕</div>
+          <h3>Languages</h3>
+          <div class="tags">
+            <span>Java</span><span>JavaScript</span><span>TypeScript</span><span>HTML/CSS</span>
+          </div>
+        </div>
+
+        <div class="skill-card">
+          <div class="skill-icon">🌱</div>
+          <h3>Frameworks</h3>
+          <div class="tags">
+            <span>Spring Boot</span><span>Spring Webflux</span><span>Spring Security</span><span>Angular</span>
+          </div>
+        </div>
+
+        <div class="skill-card">
+          <div class="skill-icon">🗄️</div>
+          <h3>Databases</h3>
+          <div class="tags">
+            <span>MySQL</span><span>PostgreSQL</span><span>MongoDB</span><span>Redis</span>
+          </div>
+        </div>
+
+        <div class="skill-card">
+          <div class="skill-icon">☁️</div>
+          <h3>Cloud</h3>
+          <div class="tags">
+            <span>AWS S3</span><span>AWS EC2</span><span>AWS Lambda</span><span>GCP BigQuery</span>
+          </div>
+        </div>
+
+        <div class="skill-card">
+          <div class="skill-icon">📨</div>
+          <h3>Messaging</h3>
+          <div class="tags">
+            <span>Apache Kafka</span><span>ActiveMQ</span>
+          </div>
+        </div>
+
+        <div class="skill-card">
+          <div class="skill-icon">🔧</div>
+          <h3>DevOps & Monitoring</h3>
+          <div class="tags">
+            <span>Docker</span><span>Kubernetes</span><span>Git</span><span>Prometheus</span><span>Grafana</span><span>Looker</span>
+          </div>
+        </div>
+
+      </div>
+    </div>
+  </section>
+
+  <!-- ── EXPERIENCE ── -->
+  <section id="experience" class="section">
+    <div class="section-inner">
+      <h2 class="section-title">Work <span>Experience</span></h2>
+      <div class="timeline">
+
+        <div class="timeline-item">
+          <div class="timeline-dot"></div>
+          <div class="timeline-card">
+            <div class="tc-header">
+              <div>
+                <h3>Software Engineer</h3>
+                <span class="company">Walmart</span>
+              </div>
+              <span class="period">Oct 2024 – Present</span>
+            </div>
+            <p class="tc-project">In Store Device Platform (ISDP)</p>
+            <ul>
+              <li>Develop Looker dashboards for trend analysis of device errors, availability, and status.</li>
+              <li>Designed heartbeat monitoring for POS-attached devices, publishing events to GCP via Kafka pipeline.</li>
+              <li>Built wave-level deployment alerts with Prometheus for real-time rollout monitoring.</li>
+              <li>Scaling POS solution from 1,000 to 3,000+ stores across the US.</li>
+            </ul>
+            <div class="tc-tags"><span>Java</span><span>Gradle</span><span>ActiveMQ</span><span>Looker</span><span>Prometheus</span></div>
+          </div>
+        </div>
+
+        <div class="timeline-item">
+          <div class="timeline-dot"></div>
+          <div class="timeline-card">
+            <div class="tc-header">
+              <div>
+                <h3>Senior Software Engineer</h3>
+                <span class="company">OpenText</span>
+              </div>
+              <span class="period">Oct 2022 – Aug 2024</span>
+            </div>
+            <p class="tc-project">Core Content – Document Management</p>
+            <ul>
+              <li>Designed async Webflux APIs for centralised content management across Web & Mobile.</li>
+              <li>Implemented OAuth2 authentication with Spring Security + Redis session storage.</li>
+              <li>Built multi-tenant SaaS on reactive microservices, achieving high throughput & low latency.</li>
+            </ul>
+            <div class="tc-tags"><span>Spring Webflux</span><span>Spring Security</span><span>Docker</span><span>Amazon S3</span></div>
+          </div>
+        </div>
+
+        <div class="timeline-item">
+          <div class="timeline-dot"></div>
+          <div class="timeline-card">
+            <div class="tc-header">
+              <div>
+                <h3>Software Engineer</h3>
+                <span class="company">PKGlobal · UPRR Client</span>
+              </div>
+              <span class="period">Oct 2020 – Sep 2022</span>
+            </div>
+            <p class="tc-project">Geospatial Temporal Platform</p>
+            <ul>
+              <li>Built highly scalable Kafka microservices handling millions of IoT ingestions from trains.</li>
+              <li>Developed map-based Angular UIs for geofence configuration and train tracking alerts.</li>
+            </ul>
+            <div class="tc-tags"><span>Java</span><span>Spring Boot</span><span>Kafka</span><span>Angular</span></div>
+          </div>
+        </div>
+
+        <div class="timeline-item">
+          <div class="timeline-dot"></div>
+          <div class="timeline-card">
+            <div class="tc-header">
+              <div>
+                <h3>Software Engineer</h3>
+                <span class="company">Mphasis · FedEx Client</span>
+              </div>
+              <span class="period">Nov 2017 – Oct 2020</span>
+            </div>
+            <p class="tc-project">European Customer Contact Platform (ECCP)</p>
+            <ul>
+              <li>Built async notification service automating email/SMS delivery via configurable templates.</li>
+              <li>Implemented generic data extraction system publishing to subscribed systems with DB backup.</li>
+              <li>Developed payment reconciliation processes for transaction consistency validation.</li>
+            </ul>
+            <div class="tc-tags"><span>Java</span><span>Spring Boot</span><span>Kafka</span><span>Angular</span></div>
+          </div>
+        </div>
+
+      </div>
+    </div>
+  </section>
+
+  <!-- ── BLOGS ── -->
+  <section id="blogs" class="section section-dark">
+    <div class="section-inner">
+      <h2 class="section-title">Blog <span>Posts</span></h2>
+      <p class="section-sub">Thoughts on software engineering, architecture & beyond.</p>
+      <div id="blog-grid" class="blog-grid">
+        <div class="blog-loading">
+          <div class="orbit-loader"></div>
+          <span>Loading transmissions…</span>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ── CONTACT ── -->
+  <section id="contact" class="section">
+    <div class="section-inner">
+      <h2 class="section-title">Get in <span>Touch</span></h2>
+      <div class="contact-grid">
+        <div class="contact-info">
+          <p>I'm open to interesting projects, collaborations, and conversations about engineering. Feel free to reach out!</p>
+          <div class="contact-items">
+            <a href="mailto:poollaad19@gmail.com" class="contact-row">
+              <span class="c-icon">✉</span>
+              <span>poollaad19@gmail.com</span>
+            </a>
+            <a href="tel:+918056419311" class="contact-row">
+              <span class="c-icon">📱</span>
+              <span>+91 8056419311</span>
+            </a>
+            <a href="https://linkedin.com" target="_blank" class="contact-row">
+              <span class="c-icon">in</span>
+              <span>LinkedIn Profile</span>
+            </a>
+          </div>
+        </div>
+        <div class="contact-form-wrap">
+          <form id="contactForm" class="contact-form">
+            <input type="text"  name="name"    placeholder="Your Name"    required />
+            <input type="email" name="email"   placeholder="Your Email"   required />
+            <textarea           name="message" placeholder="Your Message" rows="5" required></textarea>
+            <button type="submit" class="btn-primary">Send Message ›</button>
+          </form>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ── FOOTER ── -->
+  <footer>
+    <span>© 2025 Aditya Poolla · Built with HTML, CSS & JS</span>
+    <span>Deployed on GitHub Pages 🚀</span>
+  </footer>
+
+  <script src="js/starfield.js"></script>
+  <script src="js/solar.js"></script>
+  <script src="js/nav.js"></script>
+  <script src="js/posts-data.js"></script>
+  <script src="js/blogs.js"></script>
+  <script src="js/main.js"></script>
+</body>
+</html>
