@@ -102,6 +102,7 @@
   transform: translate(-50%, -50%);
   animation-timing-function: linear;
   animation-iteration-count: infinite;
+  pointer-events: none;
 }
 
 .orbit-1 { width: 180px; height: 180px; animation: orbit-spin 8s linear infinite; }
@@ -126,6 +127,7 @@
   align-items: center;
   justify-content: center;
   transition: filter 0.3s;
+  pointer-events: auto;
 }
 
 /* Counter-rotate label to stay readable */
